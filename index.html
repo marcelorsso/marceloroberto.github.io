@@ -2,9 +2,30 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Marcelo Roberto</title>
+	<title>My first vue app</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-<p>Olá</p>
+
+    <div id="app-calc">
+        <p>Os numeros inseridos foram: {{n1}} e {{n2}}</p>
+        <p>A soma dos dois numeros é:{{ n1+n2 }}</p>
+        <p>A subtração dos dois numeros é:{{ n1-n2 }}</p>
+        <p>A multiplicação dos dois numeros é:{{ n1*n2 }}</p>
+        <p>divisão dos dois numeros é:{{ n1/n2 }}</p>
+        <input v-model.number="n1" type="number">
+        <input v-model.number="n2" type="number">
+    </div>
+
+    <script>
+            var app7 = new Vue ({
+            el: '#app-calc' ,
+            data: {
+                n1: 1,
+                n2: 1,
+            }
+            })
+    </script>
 </body>
 </html>
